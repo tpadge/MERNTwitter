@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
-
 const Tweet = require('../../models/Tweet');
 const validateTweetInput = require('../../validation/tweets');
+const jwt = require('jsonwebtoken');
 
 router.get('/', (req, res) => {
   Tweet.find()
